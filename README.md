@@ -1,24 +1,22 @@
 # Becalm server
 
-This server holds data about the patients, the devices posting data, and the sensor data posted by the devices.
+This server holds all data used by the system:
+
+- patients
+- devices measuring patients' health
+- sensor data posted by the devices
 
 ## Getting started 🚀
 
-### Front end:
-Install dependencies and start the dev server:     
+Install dependencies and start the dev server:
+
 ```
 npm install
-npm start
+npm run start
 ```
-The app will be available from http://localhost:3000.  
 
-### Node server & database:
-[To be completed]
-
+The app will be available from http://localhost:4000.
 
 ## Production
-To build the app bundle for production run:    
-```
-npm run build
-```
-Your app will be available in the build directory.  
+
+TBD

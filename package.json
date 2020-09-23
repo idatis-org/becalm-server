@@ -1,34 +1,36 @@
 {
-  "name": "becalm-server",
-  "version": "1.0.0",
-  "description": "REST API to manage health data",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idatis-org/becalm-server"
-  },
-  "keywords": [
-    "COVID19"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/idatis-org/becalm-server"
-  },
-  "homepage": "https://github.com/idatis-org/becalm-server#readme",
-  "dependencies": {
-    "fastify": "^2.13.0",
-    "fastify-env": "^1.0.1",
-    "fastify-postgres": "^2.0.0",
-    "install": "^0.13.0",
-    "npm": "^6.14.4",
-    "pg": "^8.0.0",
-    "pino-pretty": "^4.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+    "name": "becalm-server",
+    "version": "1.0.0",
+    "description": "REST API to manage health data",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./src/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/idatis-org/becalm-server"
+    },
+    "keywords": [
+        "COVID19"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/idatis-org/becalm-server"
+    },
+    "homepage": "https://github.com/idatis-org/becalm-server#readme",
+    "dependencies": {
+        "fastify": "^3.4.1",
+        "fastify-cors": "^4.1.0",
+        "fastify-env": "^2.0.1",
+        "fastify-postgres": "^3.1.0",
+        "install": "^0.13.0",
+        "npm": "^6.14.8",
+        "pg": "^8.3.3",
+        "pino-pretty": "^4.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
 }
