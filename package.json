@@ -1,5 +1,5 @@
 {
-  "name": "becalm3",
+  "name": "becalm-server",
   "version": "1.0.0",
   "description": "REST API to manage health data",
   "main": "server.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sismotur/becalm3.git"
+    "url": "git+https://github.com/idatis-org/becalm-server"
   },
   "keywords": [
     "COVID19"
@@ -16,9 +16,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sismotur/becalm3/issues"
+    "url": "https://github.com/idatis-org/becalm-server"
   },
-  "homepage": "https://github.com/sismotur/becalm3#readme",
+  "homepage": "https://github.com/idatis-org/becalm-server#readme",
   "dependencies": {
     "fastify": "^2.13.0",
     "fastify-env": "^1.0.1",
