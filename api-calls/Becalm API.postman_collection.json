@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "b49820ed-bd07-4b59-9ccf-70238fddadb4",
+		"name": "Becalm API",
+		"description": "Becalm API to manage health data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post sensor data for a patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"measure_type\": \"p\",\n        \"measure_value\": 93938,\n        \"date_generation\": \"2020-04-09T10:03\"\n    },\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.60,\n        \"date_generation\": \"2020-04-09T10:03\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{api_version}}/data-sensor/4?id_device=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{api_version}}",
+						"data-sensor",
+						"4"
+					],
+					"query": [
+						{
+							"key": "id_device",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Post a bunch of data coming from sensors, the route id is the patient"
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensor data for a patient",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.49,\n        \"date_generation\": \"2020-06-04T12:53:36\"\n    },\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.50,\n        \"date_generation\": \"2020-06-04T12:58:37\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{api_version}}/data-sensor/2?start_date=2020-04-09T08:45",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{api_version}}",
+						"data-sensor",
+						"2"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-04-09T08:45"
+						}
+					]
+				},
+				"description": "Post a bunch of data coming from sensors, the route number is the patient id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get latest sensor data over 1h",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.49,\n        \"date_generation\": \"2020-06-04T12:53:36\"\n    },\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.50,\n        \"date_generation\": \"2020-06-04T12:58:37\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{api_version}}/data-sensor/latest",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{api_version}}",
+						"data-sensor",
+						"latest"
+					]
+				},
+				"description": "Post a bunch of data coming from sensors, the route number is the patient id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of devices",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.49,\n        \"date_generation\": \"2020-06-04T12:53:36\"\n    },\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.50,\n        \"date_generation\": \"2020-06-04T12:58:37\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{api_version}}/devices",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{api_version}}",
+						"devices"
+					]
+				},
+				"description": "Post a bunch of data coming from sensors, the route number is the patient id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of patients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.49,\n        \"date_generation\": \"2020-06-04T12:53:36\"\n    },\n    {\n        \"measure_type\": \"t\",\n        \"measure_value\": 37.50,\n        \"date_generation\": \"2020-06-04T12:58:37\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{api_version}}/patients",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{api_version}}",
+						"patients"
+					]
+				},
+				"description": "Post a bunch of data coming from sensors, the route number is the patient id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
