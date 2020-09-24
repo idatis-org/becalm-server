@@ -1,3 +1,12 @@
+/*
+# This file is part of becalm-server
+# https://github.com/idatis-org/becalm-server
+# Copyright: Copyright (C) 2020 Felipe Santi <felipe.santig@gmail.com>
+# License:   Apache License Version 2.0, January 2004
+#            The full text of the Apache License is available here
+#            http://www.apache.org/licenses/
+*/
+
 // FASTIFY SERVER
 
 // run with $ node server
