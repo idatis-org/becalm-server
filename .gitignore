@@ -1,3 +1,12 @@
+
+# Node
 node_modules
+
+# Secrets or server configuration
 *.env
+
+# VS Code files
 *.code-workspace
+
+# Mac OSX files
+.DS_Store

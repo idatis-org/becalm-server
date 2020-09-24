@@ -15,7 +15,7 @@ DROP VIEW IF EXISTS sd.v_patients;
 DROP VIEW IF EXISTS sd.v_measures_last_1hour;
 DROP TABLE IF EXISTS sd.measures;
 DROP TABLE IF EXISTS sd.measure_types;
-DROP TABLE IF EXISTS sd.devices_patients
+DROP TABLE IF EXISTS sd.devices_patients;
 DROP TABLE IF EXISTS sd.devices;
 DROP TABLE IF EXISTS becalm.patients;
 
@@ -577,10 +577,11 @@ INSERT INTO sd.devices (
    type_device,
    model_device,
    version_device,
+   ip_device,
    location_hospital,
    location_place
 ) 
-VALUES (1, 'rasp-smt-dev', 'raspberry_pi', '3B', '1.2', 'Valdemoro', 'Sala 4');
+VALUES (1, 'rasp-smt-dev', 'raspberry_pi', '3B', '1.2', '127.0.0.1', 'Valdemoro', 'Sala 4');
 
 -- insert some test data 
 INSERT INTO sd.measures (id_patient, measure_type, measure_value, date_generation) VALUES
@@ -598,9 +599,10 @@ INSERT INTO sd.measures (id_patient, measure_type, measure_value, date_generatio
 (2, 'o', 121, '2020-04-02T12:16.1+02');
 
 -- full table (uses partitions)
-EXPLAIN ANALYZE SELECT * FROM sd.measures WHERE date_generation > '02-04-2020' AND id_patient = 1;
-EXPLAIN ANALYZE SELECT * FROM sd.measures WHERE date_generation > '02-04-2020' AND id_patient = 2;
+-- EXPLAIN ANALYZE SELECT * FROM sd.measures WHERE date_generation > '02-04-2020' AND id_patient = 1;
+-- EXPLAIN ANALYZE SELECT * FROM sd.measures WHERE date_generation > '02-04-2020' AND id_patient = 2;
 
+/*
 -- retrieve data 
 SELECT
   id_patient,
@@ -609,6 +611,6 @@ SELECT
   date_generation
 FROM sd.measures m
 WHERE date_generation > '2020-04-02T12:00' AND id_patient = 2;
-
+*/
 
 
