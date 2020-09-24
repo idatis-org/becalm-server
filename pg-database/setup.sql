@@ -322,8 +322,8 @@ BEGIN
       _err_constraint_name = CONSTRAINT_NAME;
       SELECT row_to_json (s) FROM 
       (SELECT 400 as code, 
-      'Foreign key violation on implan: ' || _i_name_implan ||
-        ', schema: ' || _err_schema_name || 
+      'Foreign key violation on: ' || 
+        'schema: ' || _err_schema_name || 
         ', table: ' || _err_table_name ||
         ', constraint name: ' || _err_constraint_name as status
       ) s INTO _o_json;
