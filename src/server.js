@@ -31,6 +31,7 @@ const schema = {
   properties: {
     ADDRESS: {
       type: "string",
+      default: "0.0.0.0",
     },
     PORT: {
       type: "integer",
@@ -74,7 +75,7 @@ const start = async () => {
   try {
     // call ready() to ensure all plugins are loaded properly before calling listen()
     await fastify.ready();
-    await fastify.listen(fastify.config.PORT);
+    await fastify.listen(fastify.config.PORT, fastify.config.ADDRESS);
     fastify.log.info(
       `Server listening on ${fastify.server.address().port} - Environment is ${
         fastify.config.NODE_ENV
