@@ -112,6 +112,7 @@ INSERT INTO sd.measure_types (
   measure_precision
 )
 VALUES
+('h', 'heartbeat', 'ppm', 10, 200, 10,200, 0),
 ('t', 'Temperatura', '°C', 36, 40, 30, 50, 1),
 ('p', 'Presión aire máscara', 'Pa', 100700, 101400, 100500, 101500, 1),
 ('c', 'Concentración CO2 máscara', 'ppm', 110, 190, 100, 200, 0),
