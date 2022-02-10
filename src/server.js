@@ -9,6 +9,9 @@
 
 // FASTIFY SERVER
 
+// Load config file
+require('dotenv').config
+
 // run with $ node server
 // Require fastify (www.fastify.io)
 const fastify = require("fastify")({
@@ -57,8 +60,10 @@ fastify.register(require("fastify-env"), options);
 
 // register the database (need to load configuration first)
 fastify.register(require("fastify-postgres"), {
-  // consider abandoning fastify-env: https://github.com/fastify/fastify-env/issues/48
-  connectionString: "postgres://becalm@localhost/becalm",
+  host: process.env.PGHOST,
+  port: process.env.PGPORT,
+  user: process.env.PGUSER,
+  database: process.env.PGDATABASE,
 });
 
 // Register Postgres database manager
