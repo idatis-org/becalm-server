@@ -114,7 +114,7 @@ INSERT INTO sd.measure_types (
 VALUES
 ('h', 'heartbeat', 'ppm', 10, 200, 10,200, 0),
 ('t', 'Temperatura', '°C', 36, 40, 30, 50, 1),
-('p', 'Presión aire máscara', 'Pa', 100700, 101400, 100500, 101500, 1),
+('p', 'Presión gas máscara', 'Pa', 100700, 101400, 100500, 101500, 1),
 ('c', 'Concentración CO2 máscara', 'ppm', 110, 190, 100, 200, 0),
 ('o', 'Sp02 - Saturación de oxígeno en sangre', '?', 110, 185, 100, 200, 0);
 
@@ -135,7 +135,7 @@ CREATE TABLE sd.measures (
 CREATE INDEX idx_date_generation_inverse ON sd.measures (date_generation DESC);
 CREATE INDEX idx_measure_type ON sd.measures USING btree (measure_type DESC);
 
--- create a partition for each device
+-- create a partition for each patient
 -- DROP TABLE sd.measures_1;
 CREATE TABLE sd.measures_1 PARTITION OF sd.measures FOR VALUES IN (1);
 CREATE TABLE sd.measures_2 PARTITION OF sd.measures FOR VALUES IN (2);
